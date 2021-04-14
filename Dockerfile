@@ -10,7 +10,7 @@ RUN apk add --update git bash wget openssl
 RUN curl --output /tmp/packer.zip https://releases.hashicorp.com/packer/${PACKER_VERSION}/packer_${PACKER_VERSION}_linux_amd64.zip \
     && unzip /tmp/packer -d /bin
 
-USER packer
+# USER packer
 WORKDIR /app
 
 ENTRYPOINT ["/bin/packer"]
